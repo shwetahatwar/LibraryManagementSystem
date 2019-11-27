@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Students List</h1>
+  
+    <table class="table table-striped" style="margin-top: 30px;">
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Student Name</th>
+          <th>Mobile Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let students of studentsList">
+          <td>{{students.rollNo}}</td>
+          <td>{{students.studentName}}</td>
+          <td>{{students.mobileNo}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

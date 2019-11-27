@@ -9,6 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books-details.component.css']
 })
 export class BooksDetailsComponent implements OnInit {
+  // id = '';
+  // price = '';
+  // category = '';
+  // Author = '';
+  // email = '';
+  // password = '';
   selectedBooks = {};
 
   constructor(

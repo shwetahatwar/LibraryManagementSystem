@@ -20,23 +20,18 @@ export class BooksService {
     return this.http.get(this.url + '/' + id);
   }
 
-  addBooks(id: string, bookname: string, price: string, category: string, Author: string, email: string, password: string) {
+  addBooks(bookname: string, price: string, Author: string) {
 
-      const body = {
-        id: id,
-       bookname: bookname,
-	price: price,
-	category: category,
-	Author: Author, 
-        email: email ,
-        password: password
+    const body = {
+      bookname: bookname,
+      price: price,
+      Author: Author,
+    };
 
-      };
+    const header = new Headers({ 'Content-Type': 'application/json' });
+    const requestOption = new RequestOptions({ headers: header });
 
-      const header = new Headers({ 'Content-Type': 'application/json' });
-      const requestOption = new RequestOptions({ headers: header });
-
-      return this.http.post(this.url, body, requestOption);
+    return this.http.post(this.url, body, requestOption);
   }
 
   updateBooks() {

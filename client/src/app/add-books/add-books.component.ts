@@ -11,13 +11,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-books.component.css']
 })
 export class AddBooksComponent implements OnInit {
-  id = '';
+  public minDate: Date = new Date("05/07/1989");
+  public maxDate: Date = new Date("12/27/2090");
+  public value: Date = new Date("11/27/2019");
   bookname = '';
   price = '';
-  category = '';
   Author = '';
-  email = '';
-  password = '';
 
   constructor(
     private router: Router,
@@ -28,7 +27,7 @@ export class AddBooksComponent implements OnInit {
 
   onAdd() {
     this.booksService
-      .addBooks(this.id,this.bookname,this.price,this.category,this.Author,this.email,this.password)
+      .addBooks(this.bookname, this.price, this.Author)
       .subscribe(response => {
         console.log(response);
         this.router.navigate(['/books-list']);

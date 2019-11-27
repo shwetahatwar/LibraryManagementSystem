@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Admin</h2>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="form">
+        <div class="form-group">
+          <label for="">Email</label>
+          <input [(ngModel)]="admin_email" type="admin_email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          <input [(ngModel)]="admin_password" type="admin_password" class="form-control">
+        </div>
+        <div class="form-group">
+          <button (click)="onAdmin()" class="btn btn-success">Login</button>
+          <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px">Cancel</button>
+          <button (click)="onRegister()" class="btn btn-success pull-right">Register</button>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  

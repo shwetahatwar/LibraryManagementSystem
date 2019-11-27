@@ -6,7 +6,8 @@ const router = express.Router();
 
 router.get('/Library', (request, response) => {
     const connection = db.connect();
-    const statement = `select bookname,price,category,Author,email,password from Library`;
+    const statement = `select id, bookname,price,Author from booklist`;
+    console.log('>>>>>>>statement::', statement);
     connection.query(statement, (error, result) => {
         connection.end();
         response.send(utils.createResponse(error, result));
@@ -24,13 +25,16 @@ router.get('/Library/:id', (request, response) => {
 });
 
 router.post('/Library', (request, response) => {
-    const {bookname,price,category,Author,email,password} = request.body;
+    const {bookname, price, Author } = request.body;
     const connection = db.connect();
-    const statement = `insert into Library
-            (bookname,price,category,Author,email,password) values 
-            ('${bookname}', '${price}', '${category}', '${Author}','${email}','${password}')`;
+    const statement = `insert into booklist
+            (bookname, price, Author) values 
+            ('${bookname}', '${price}', '${Author}');`;
+     console.log('########statement::', statement);
+
     connection.query(statement, (error, result) => {
         connection.end();
+        console.log('########response::', response);
         response.send(utils.createResponse(error, result));
     })
 });

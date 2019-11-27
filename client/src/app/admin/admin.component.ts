@@ -1,20 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.css']
 })
-export class LoginComponent implements OnInit {
-  name = '';
-  email = '';
-  password = '';
+export class AdminComponent implements OnInit {
 
-  constructor(
-    private router: Router,
-    private userService: UserService) { }
+  admin_email: 'shweta.hatwar6@gmail.com';
+  admin_password: 'shweta';
+
+  constructor( private router: Router, private userService: UserService) { }
 
   ngOnInit() {
   }
@@ -23,24 +21,22 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/books-list']);
   }
 
-  onLogin() {
-    alert(this.email + this.password);
+  onAdmin() {
     this.userService
-      .signin(this.email, this.password)
+      .signin(this.admin_email, this.admin_password)
       .subscribe(response => {
         const result = response.json();
-        if (result.status == 'error') {
-          alert('invalid email or password');
+        if (result.status === 'error') {
+          alert('invalid admin_email or admin_password');
         } else {
-          sessionStorage['login_status'] = '1';
-
-          alert('welcome to the application');
+          console.log('In admin login sucess');
+          //sessionStorage['admin_status'] = '0';
           this.router.navigate(['/books-add']);
         }
       });
     }
 
-    onSignup(){
+    onRegister(){
       //alert(this.name);
       this.router.navigate(['/signup']);
     }
@@ -61,13 +57,7 @@ export class LoginComponent implements OnInit {
 
     //   });
     // }
-
-
-  onLoginAsAdmin() {
-    this.router.navigate(['/admin']);
-  }
-
-  onLoginAsStudent() {
-    this.router.navigate(['/student']);
-  }
 }
+
+
+

@@ -11,7 +11,7 @@ import { BooksService } from '../books.service';
 })
 export class BooksListComponent implements OnInit {
 
-  bookss = [];
+  books = [];
 
   // dependancy injection
   constructor(
@@ -27,7 +27,7 @@ export class BooksListComponent implements OnInit {
       .subscribe(response => {
         const result = response.json();
        //alert(result.data);
-        this.bookss = result.data;
+        this.books = result.data;
       });
   }
 

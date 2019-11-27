@@ -7,21 +7,15 @@
         <th>id</th>
         <th>Bookname</th>
         <th>Price</th>
-        <th>Category</th>
         <th>Author</th>
-        <th>Email</th>
-        <th>Password</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let books of bookss">
+      <tr *ngFor="let books of books">
         <td>{{books.id}}</td>
         <td>{{books.bookname}}</td>
         <td>{{books.price}}</td>
-        <td>{{books.category}}</td>
         <td>{{books.Author}}</td>
-        <td>{{books.email}}</td>
-        <td>{{books.password}}</td>
         <td>
           <button (click)="onDetails(books)" class="btn btn-success"><i class="glyphicon glyphicon-info-sign"></i></button>
           <button (click)="onDelete(books)" class="btn btn-danger" style="margin-left: 10px"><i class="glyphicon glyphicon-trash"></i></button>
@@ -30,3 +24,6 @@
     </tbody>
   </table>
 </div>
+
+
+<app-student-list-by-admin></app-student-list-by-admin>

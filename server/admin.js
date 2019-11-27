@@ -3,26 +3,10 @@ const db = require('./db');
 const utils = require('./utils');
 const router = express.Router();
 
-router.post('/Library/signup', (request, response) => {
-    const { name, email, password, phone } = request.body;
-
-    const statement = `
-        insert into Library 
-            (name, email, password, phone) 
-            values 
-            ('${name}', '${email}', '${password}', '${phone}');
-    `;
-    const connection = db.connect();
-    connection.query(statement, (error, result) => {
-        connection.end();
-        response.send(utils.createResponse(error, result));
-    });
-});
-
-router.post('/Library/signin', (request, response) => {
+router.post('/signin', (request, response) => {
     const { email, password } = request.body;
     console.log(request.body);
-    const statement = `select * from Library where email = '${email}' and password = '${password}'`;
+    const statement = `select * from admin where email = '${email}' and password = '${password}'`;
     const connection = db.connect();
     connection.query(statement, (error, result) => {
         connection.end();
