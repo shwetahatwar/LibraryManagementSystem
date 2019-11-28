@@ -39,7 +39,7 @@ export class BooksListComponent implements OnInit {
   }
 
   onDelete(books) {
-     const answer = confirm('Are you sure you want to delete ' +  books.bookname + ' ?');
+     const answer = confirm('Are you sure you want to delete ' +  books.id + ' ?');
     if (answer) {
       console.log('inside delete', books.id);
       this.booksService

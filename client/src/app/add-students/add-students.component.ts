@@ -12,6 +12,7 @@ export class AddStudentsComponent implements OnInit {
   rollNo = '';
   studentName = '';
   mobileNo = '';
+  showMsg: boolean = false;
 
   constructor(
     private router: Router,
@@ -25,8 +26,14 @@ export class AddStudentsComponent implements OnInit {
       .addStudentByAdmin(this.rollNo, this.studentName, this.mobileNo)
       .subscribe(response => {
         console.log(response);
-        this.router.navigate(['/books-list']);
+        this.router.navigate(['/add-student']);
+        this.showMsg = true;
       });
   }
+
+  onCancel() {
+    this.router.navigate(['/admin-panel']);
+  }
+
 
 }

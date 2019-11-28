@@ -31,7 +31,7 @@ export class AdminComponent implements OnInit {
         } else {
           console.log('In admin login sucess');
           //sessionStorage['admin_status'] = '0';
-          this.router.navigate(['/books-add']);
+          this.router.navigate(['/admin-panel']);
         }
       });
     }

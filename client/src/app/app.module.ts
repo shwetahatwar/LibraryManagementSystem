@@ -18,6 +18,7 @@ import { AdminComponent } from './admin/admin.component';
 import { StudentComponent } from './student/student.component';
 import { AddStudentsComponent } from './add-students/add-students.component';
 import { StudentListByAdminComponent } from './student-list-by-admin/student-list-by-admin.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { StudentListByAdminComponent } from './student-list-by-admin/student-lis
     AdminComponent,
     StudentComponent,
     AddStudentsComponent,
-    StudentListByAdminComponent
+    StudentListByAdminComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,10 @@ import { StudentListByAdminComponent } from './student-list-by-admin/student-lis
       { path: '#', component: LoginComponent },
       { path: 'signup', component: SignupComponent },
       { path: 'admin', component: AdminComponent},
-      { path: 'student', component: StudentComponent}
+      { path: 'student', component: StudentComponent},
+      { path: 'admin-panel', component: AdminPanelComponent},
+      { path: 'add-student', component: AddStudentsComponent},
+      { path: 'student-list-by-admin', component: StudentListByAdminComponent},
 
     ])
   ],

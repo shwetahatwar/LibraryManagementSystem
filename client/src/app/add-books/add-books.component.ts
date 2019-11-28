@@ -30,12 +30,12 @@ export class AddBooksComponent implements OnInit {
       .addBooks(this.bookname, this.price, this.Author)
       .subscribe(response => {
         console.log(response);
-        this.router.navigate(['/books-list']);
+        this.router.navigate(['/books-add']);
       });
   }
 
   onCancel() {
-    this.router.navigate(['/books-list']);
+    this.router.navigate(['/admin-panel']);
   }
 
 }

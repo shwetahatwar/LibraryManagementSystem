@@ -27,7 +27,11 @@
 
   <div class="row">
     <div class="col-md-12">
-      <button (click)="onAddStudentByAdmin()" class="btn btn-success">Add</button>
+      
+        <div class="row"  *ngIf="showMsg"></div>
+       <button (click)="onAddStudentByAdmin()" class="btn btn-success">Add</button>
+    
+      <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px">Cancel</button>
     </div>
   </div>
 </div>
