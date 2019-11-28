@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Return Book</h2>
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="form">
+      <div class="form-group">
+        <label for="">Bookname</label>
+        <input [(ngModel)]="Bookname" type="bookname" class="form-control">
+      </div>
+      <!-- <div class="form-group">
+        <label for="">Search Book</label>
+        <input [(ngModel)]="searchbook" type="searchbook" class="form-control">
+      </div> -->
+
+    
+      <div class="form-group">
+        <button (click)="onSubmit()" class="btn btn-success">submit</button>
+        <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px">Cancel</button>
+       
+      </div>
+    </div>
+  </div>
+
+</div>

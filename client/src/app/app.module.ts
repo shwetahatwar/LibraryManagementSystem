@@ -21,6 +21,7 @@ import { StudentListByAdminComponent } from './student-list-by-admin/student-lis
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { IssueReturnBookComponent } from './issue-return-book/issue-return-book.component';
+import { ReturnBookComponent } from './return-book/return-book.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { IssueReturnBookComponent } from './issue-return-book/issue-return-book.
     StudentListByAdminComponent,
     AdminPanelComponent,
     StudentloginComponent,
-    IssueReturnBookComponent
+    IssueReturnBookComponent,
+    ReturnBookComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +63,9 @@ import { IssueReturnBookComponent } from './issue-return-book/issue-return-book.
       { path: 'add-student', component: AddStudentsComponent},
       { path: 'student-list-by-admin', component: StudentListByAdminComponent},
       { path: 'studentlogin', component: StudentloginComponent},
+      { path: 'issue-return-book', component: IssueReturnBookComponent},
+      { path: 'return-book', component: ReturnBookComponent},
+      
 
     ])
   ],

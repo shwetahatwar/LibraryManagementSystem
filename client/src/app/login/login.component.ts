@@ -30,11 +30,11 @@ export class LoginComponent implements OnInit {
       .subscribe(response => {
         const result = response.json();
         if (result.status == 'error') {
-          alert('invalid email or password');
+      //    alert('invalid email or password');
         } else {
           sessionStorage['login_status'] = '1';
 
-          alert('welcome to the application');
+         // alert('welcome to the application');
           this.router.navigate(['/books-add']);
         }
       });
@@ -44,24 +44,6 @@ export class LoginComponent implements OnInit {
       //alert(this.name);
       this.router.navigate(['/signup']);
     }
-    // onSignup(){
-    //   alert(this.name + this.lastName + this.phone + this.email + this.password );
-    //   this.userService
-    //   .signup(this.name, this.lastName, this.phone, this.email, this.password)
-    //   .subscribe(response =>{
-    //     const result = response.json();
-    //     if(result.status == 'error'){
-    //       alert('invalid data');
-    //     } else {
-    //       sessionStorage['signup_status'] = '1';
-    //       alert('welcome to login');
-    //       this.router.navigate(['/login']);
-
-    //     }
-
-    //   });
-    // }
-
 
   onLoginAsAdmin() {
     this.router.navigate(['/admin']);

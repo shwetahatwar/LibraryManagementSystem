@@ -22,7 +22,7 @@ export class SignupComponent implements OnInit {
     ngOnInit() {
     }
     onCancel() {
-      this.router.navigate(['/books-list']);
+      this.router.navigate(['/admin']);
     }
 
     onAddUser() {
@@ -40,17 +40,17 @@ export class SignupComponent implements OnInit {
       this.userService
       .signup(this.name, this.lastName, this.phone, this.email, this.password)
       .subscribe(response => {
-        alert(this.onSignup);
+      //  alert(this.onSignup);
         const result = response.json();
-        alert(result.status);
+       // alert(result.status);
         if(result.status == 'error'){
-          alert('invalid data')
+     //     alert('invalid data')
          // alert('welcome to signup');
           ;
         } else {
           sessionStorage['signup_status'] = '1';
-          alert('welcome to signup');
-          this.router.navigate(['/books-list']);
+         // alert('welcome to signup');
+          this.router.navigate(['/admin']);
          }
       });
     }

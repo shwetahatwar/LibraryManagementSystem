@@ -30,7 +30,7 @@ export class StudentloginComponent implements OnInit {
         } else {
           console.log('In student login sucess');
           //sessionStorage['admin_status'] = '0';
-          this.router.navigate(['/student']);
+          this.router.navigate(['/issue-return-book']);
         }
       });
     }
