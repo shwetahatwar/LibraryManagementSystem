@@ -20,7 +20,7 @@ export class StudentComponent implements OnInit {
     ngOnInit() {
     }
     onCancel() {
-      this.router.navigate(['/books-list']);
+      this.router.navigate(['/studentlogin']);
     }
 
     onAddUser() {
@@ -28,7 +28,7 @@ export class StudentComponent implements OnInit {
         .signup(this.name, this.lastName, this.phone, this.email, this.password)
         .subscribe(response => {
           console.log(response);
-          this.router.navigate(['/books-list']);
+          this.router.navigate(['/studentlogin']);
         });
     }
 
@@ -38,7 +38,8 @@ export class StudentComponent implements OnInit {
       this.userService
       .studentSignup(this.name, this.lastName, this.phone, this.email, this.password)
       .subscribe(response => {
-        console.log(response)
+        console.log(response);
+        this.router.navigate(['/studentlogin']);
       });
     }
 

@@ -68,6 +68,6 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginAsStudent() {
-    this.router.navigate(['/student']);
+    this.router.navigate(['/studentlogin']);
   }
 }

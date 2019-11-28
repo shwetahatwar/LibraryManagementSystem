@@ -19,6 +19,8 @@ import { StudentComponent } from './student/student.component';
 import { AddStudentsComponent } from './add-students/add-students.component';
 import { StudentListByAdminComponent } from './student-list-by-admin/student-list-by-admin.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { StudentloginComponent } from './studentlogin/studentlogin.component';
+import { IssueReturnBookComponent } from './issue-return-book/issue-return-book.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     StudentComponent,
     AddStudentsComponent,
     StudentListByAdminComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    StudentloginComponent,
+    IssueReturnBookComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +60,7 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
       { path: 'admin-panel', component: AdminPanelComponent},
       { path: 'add-student', component: AddStudentsComponent},
       { path: 'student-list-by-admin', component: StudentListByAdminComponent},
+      { path: 'studentlogin', component: StudentloginComponent},
 
     ])
   ],

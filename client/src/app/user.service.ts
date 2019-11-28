@@ -74,6 +74,21 @@ export class UserService implements CanActivate {
     return this.http.post(this.url + '/signin', body, requestOption);
   }
 
+  //student signin
+
+  studentsignin(email: string, password: string) {
+    const body = {
+      email: email,
+      password: password
+    };
+
+    const header = new Headers({'Content-Type': 'application/json'});
+    const requestOption = new RequestOptions({headers: header});
+
+    return this.http.post(this.url + '/studentsignin', body, requestOption);
+  }
+
+
   admin(admin_email: string, admin_password: string) {
     const body = {
       email: admin_email,
