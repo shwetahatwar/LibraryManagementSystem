@@ -8,13 +8,10 @@
           <div class="col-12">
             <div class="form-group row mb-12">
               <label class="col-md-6">Select Book Name</label>
-              <div class="col-md-6">
-              <select class="col-md-12">
-               <option value="">SELECT</option>
-               <option value="1">we can win</option>
-               <option value="2">black book</option>
-               <option value="3">mahabharat</option>
-               <option value="4">geeta</option>
+              <div  class="col-md-6">
+              <select class="col-md-12" >
+               <option value="">Select</option>
+               <option *ngFor="let item of books">{{item.bookname}}</option>
              </select>
              </div>
            </div>

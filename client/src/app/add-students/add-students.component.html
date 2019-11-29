@@ -1,34 +1,28 @@
 <div class="container">
   <h1>Add Student</h1>
 
-  <div class="row" style="margin-top: 30px;">
-    <div class="col-md-12">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
       <div class="form-group">
         <label for="">Roll No.</label>
         <input [(ngModel)]="rollNo" type="text" class="form-control">
       </div>
-    </div>
-    <div class="col-md-12">
+  
+    
       <div class="form-group">
         <label for="">Student Name</label>
         <input [(ngModel)]="studentName" type="text" class="form-control">
       </div>
-    </div>
-  </div>
+ 
 
-  <div class="row">
-    <div class="col-md-12">
+
+ 
       <div class="form-group">
         <label for="">Mobile No.</label>
         <input [(ngModel)]="mobileNo" type="text" class="form-control">
       </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      
-        <div class="row"  *ngIf="showMsg"></div>
+  
+      <div class="form-group">
        <button (click)="onAddStudentByAdmin()" class="btn btn-success">Add</button>
     
       <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px">Cancel</button>

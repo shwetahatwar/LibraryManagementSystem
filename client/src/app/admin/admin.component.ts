@@ -18,7 +18,7 @@ export class AdminComponent implements OnInit {
   }
 
   onCancel() {
-    this.router.navigate(['/books-list']);
+    this.router.navigate(['#']);
   }
 
   onAdmin() {
